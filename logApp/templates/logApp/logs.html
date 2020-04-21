@@ -1,0 +1,11 @@
+{% extends 'logApp/base.html' %}
+
+{% block content %}
+
+    {% for log in logs %}
+        <h1>{{ log.comment }}</h1>
+        <p>By {{ log.author }} on {{ log.event_datetime }}</p>
+        <p>{{ log.location }}</p>
+    {% endfor %}
+    
+{% endblock content %}
