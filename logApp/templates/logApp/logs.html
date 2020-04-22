@@ -4,7 +4,7 @@
 
     {% for log in logs %}
         <h1>{{ log.comment }}</h1>
-        <p>By {{ log.author }} on {{ log.event_datetime }}</p>
+        <p>By {{ log.author }} on {{ log.event_datetime | date:'d-m-Y P' }}</p>
         <p>{{ log.location }}</p>
     {% endfor %}
     
