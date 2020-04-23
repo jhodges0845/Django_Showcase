@@ -1,0 +1,10 @@
+{% extends 'logApp/base.html' %}
+
+{% block content %}
+
+    <h1>{{ object.comment }}</h1>
+    <p>By {{ object.author }} on {{ object.event_datetime | date:'d-m-Y P' }}</p>
+    <p>{{ object.location }}</p>
+
+    
+{% endblock content %}

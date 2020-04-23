@@ -2,6 +2,46 @@
     
 {% block content %}
 
-    <h1> LogApp Home</h1>
-    
+    <div class="container">
+    <div class="row border-bottom">
+
+        <!--Flask Showcase-->
+        <div class="col-6-lg mr-5 pr-5 border-right border-bottom ">
+            <a href="https://hodges-flask-showcase.herokuapp.com">
+                <div class="p-5 text-center ">
+                    <h3>Flask Showcase</h3>
+                    <img class="showcase-img" src="/static/logApp/flask_icon.png">      
+                </div>
+            </a>
+            
+        </div>
+
+        <!--Django Showcase-->
+        <div class="col-6-lg border-bottom">
+            <div class="bg-django p-5 text-center ">
+                <h3 style="color: white;">Django Showcase</h3>
+                <img class="showcase-img" src="/static/logApp/django_icon.png">
+            </div>
+                
+        </div>
+    </div>
+    <div class="row">
+
+        <!--Express Showcase-->
+        <div class="col-6-lg mr-5 pr-5 border-right ">
+            <div class="p-5 text-center">
+                <h3>Express Showcase</h3>
+                <img class="showcase-img" src="/static/logApp/express_icon.png">
+            </div>
+        </div>
+
+        <!--ASP.NET CORE Showcase-->
+        <div class="col-6-lg ">
+            <div class="p-5 text-center">
+                <h3>ASP.Net Core Showcase</h3>
+                <img class="showcase-img" src="/static/logApp/asp_core_icon.png">
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock content %}

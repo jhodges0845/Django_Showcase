@@ -18,8 +18,9 @@
         {% endif %}
     </head>
     <body>
+        <!--Navbar-->
         <header class="site-header">
-                <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+                <nav class="navbar navbar-expand-md navbar-dark bg-django fixed-top">
                     <div class="container">
                         <a class="navbar-brand mr-4" href="{% url 'logApp-logs' %}"> Hodges Django Showcase</a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,16 +33,42 @@
                             </div>
                             <!-- Navbar Right Side -->
                             <div class="navbar-nav">
-                            <a class="nav-item nav-link" href="#">Login</a>
-                            <a class="nav-item nav-link" href="#">Register</a>
-                            </div>
+                            {% if user.is_authenticated %}
+                            <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
+                            <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+                            {% else %}
+                            <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+                            <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
+                            {% endif %}
+                        </div>
                         </div>
                     </div>
                 </nav>
             </header>
 
         <div class="container">
-                {% block content %}{% endblock content %}
+            <!--Messages-->
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+            <!--Content-->
+            <div class="row">
+                <div class="col-8-xl">
+                    {% block content %}{% endblock content %}
+                </div>
+
+                <!--Side Panel-->
+                <div class="col-4-xl">
+                    <h2>Test side panel</h2>
+                </div>
+            </div>
+            
+            
         </div>
 
          <!-- jQuery first, then Popper.js, then Bootstrap JS -->
