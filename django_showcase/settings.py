@@ -25,7 +25,7 @@ SECRET_KEY = 'jyt@iqh!9)59ohi8(qsfo$*5j$kck4*(&uq^zn5^6t^vh8+wz0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['hodges-django-showcase.herokuapp.com']
 
 
 # Application definition
