@@ -9,9 +9,9 @@ class Profile(models.Model):
     def __str__(self):
         return f"{self.user.username} Profile"
 
-    def save(self):
+    def save(self, *args, **kwargs):
         #Run inheritted save from parent class#
-        super().save()
+        super().save(*args, **kwargs)
 
         #Open image in PILLOW#
         img = Image.open(self.image.path)
