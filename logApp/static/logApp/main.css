@@ -20,13 +20,16 @@ ul {
   background-color: #fafafa;
 }
 
-.bg-flask:hover, .bg-flash:hover h3{
+.bg-flask:hover, .bg-flask:hover h3{
   background-color: #343a40;
   color: white;
 }
 
 .bg-django {
   background-color: #19865c;
+}
+
+.bg-django h3{
   color: white;
 }
 
